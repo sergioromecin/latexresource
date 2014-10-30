@@ -1,40 +1,20 @@
 \documentclass{article}
-
-\usepackage{tikz}
-\usepackage{gantt}
-
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
 \begin{document}
-  \begin{gantt}{10}{10}
-
-    \begin{ganttitle}
-      \titleelement{Cronograma del proyecto}{10}
-    \end{ganttitle}
-    
-    \begin{ganttitle}
-       \titleelement{1-3 Oct}{0}{2}
-       \titleelement{7-12 Oct}{2}{3}
-    \end{ganttitle}
-    
-    \begin{ganttitle}
-    \numtitle{1}{1}{10}{1}
-    \end{ganttitle}
-    
-    \ganttbar{Exploraci\'on}{2}{17}
-    \ganttbar{Inicializaci\'on}{5}{10}
-    \ganttgroup{Productizaci\'on}{6}{18}
-
-    \ganttbar{a task}{0}{2}
-    \ganttbarcon{a consecutive task}{2}{4}
-    \ganttbarcon{another consecutive task}{8}{2}
-
-    %\ganttbar{Exploraci\'on}{0}{1}
-    %\ganttbar{Inicializaci\'on}{3}{5}
-    %\ganttbar{Productizaci\'on}{2}{5}
-    %\ganttbar{Estabilizaci\'on}{2}{6}
-    %%\ganttmilestone[color=cyan]{Milestone with color!}{4}
-    %%\ganttbar[color=cyan]{another coloured task}{4}{4}
-    %\ganttbar{Pruebas}{6}{8}
-    %\ganttcon{4}{5}{4}{7}
-    %%\ganttmilestonecon{A connected Milestone}{7}
-  \end{gantt}
+\begin{landscape}
+\begin{ganttchart}{1}{40}
+  \gantttitle{1 de}{40} \\
+  \gantttitlelist{1,...,40}{1} \\
+  \ganttgroup{Exploraci\'on}{1}{7} \\
+  \ganttbar{Inicializaci\'on}{1}{2} \\
+  \ganttlinkedbar{Productizaci\'on}{3}{7} \ganttnewline
+  \ganttmilestone{Estabilizaci\'on}{7} \ganttnewline
+  \ganttbar{Pruebas}{8}{12}
+  \ganttlink{elem2}{elem3}
+  \ganttlink{elem3}{elem4}
+\end{ganttchart}
+\end{landscape}
 \end{document}
+
+
