@@ -1,11 +1,14 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage{pgfgantt}
-\usepackage{pdflscape}
+%\usepackage{pdflscape}
 \begin{document}
-\begin{landscape}
-\begin{ganttchart}{1}{40}
-  \gantttitle{1 de}{40} \\
-  \gantttitlelist{1,...,40}{1} \\
+%\begin{landscape}
+\begin{ganttchart}{1}{10}
+  \gantttitle{1 Oct}{5} 
+  \gantttitle{1 Nov}{5} \\
+  \gantttitlelist{29,6,13,20,27}{1} 
+  \gantttitlelist{3,10,17,24,1}{1}\\
   \ganttgroup{Exploraci\'on}{1}{7} \\
   \ganttbar{Inicializaci\'on}{1}{2} \\
   \ganttlinkedbar{Productizaci\'on}{3}{7} \ganttnewline
@@ -14,7 +17,7 @@
   \ganttlink{elem2}{elem3}
   \ganttlink{elem3}{elem4}
 \end{ganttchart}
-\end{landscape}
+%\end{landscape}
 \end{document}
 
 
